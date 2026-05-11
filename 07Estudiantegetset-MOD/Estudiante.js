@@ -1,4 +1,4 @@
-class Estudiante {
+export class Estudiante {
     #nombre
     #calificaciones
     constructor(nombre,calificaciones){
@@ -8,7 +8,6 @@ class Estudiante {
 
     // metodo privado 
    #validarCalificacion(valor){
-
     if(valor >= 0 && valor <= 100){
         this.#calificaciones = valor;
         if(valor >= 70){
@@ -17,9 +16,10 @@ class Estudiante {
             console.log("Reprobado");
         }
         } else {
-        console.log("Calificación inválida");
+            console.log("Calificación inválida");
         }
     }
+
     // Getter
     get obtenerCal(){
         return this.#calificaciones;
@@ -35,12 +35,3 @@ class Estudiante {
         calificacion es ${this.#calificaciones}`)
     }
 }
-
-const estudiante1 = new Estudiante("Luis",78)
-const estudiante2 = new Estudiante ("pepe",66)
-
-estudiante1.newCalificacion = 70;
-estudiante1.mostrarInformacion();
-
-estudiante2.newCalificacion = 90;
-estudiante2.mostrarInformacion();

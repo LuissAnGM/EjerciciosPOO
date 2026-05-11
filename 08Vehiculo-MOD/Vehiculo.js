@@ -1,6 +1,6 @@
-class Vehiculo {
+export class Vehiculo {
     #velocidad
-    constructor(velocidad){
+   constructor(velocidad){
     this.#controlVelocidad(velocidad);
     }
 
@@ -24,8 +24,3 @@ class Vehiculo {
         console.log(`El vehiculo va a una velocidad de ${this.#velocidad} km/h`)
     }
 }
-
-const auto = new Vehiculo (120);
-auto.newVelocidad=60;
-console.log(auto.ObtenerVel);
-auto.mostrarInformacion();
