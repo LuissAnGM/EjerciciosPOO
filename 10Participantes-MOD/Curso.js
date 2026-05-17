@@ -26,13 +26,13 @@ export class Curso {
     get sexo() {return this.#sexo}
 
     set old(old){
-        if(old){
+        if(old < 0 || isNaN(old)){
             throw new ErrorInst("edad inválida")
         }
             this.#old = old
     }
     set altura(altura){
-        if(altura){
+        if(altura<0 || isNaN(altura)){
             throw new ErrorInst("altura inválida")
         }
             this.#old = old
